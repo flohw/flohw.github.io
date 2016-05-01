@@ -1,12 +1,13 @@
 <div id="menu">
   <nav class="container-960">
     <ul>
-      {% for page in site.pages %}
-        {% if page.layout == 'default' %}
+      {% assign p = site.pages|sort: "weight" %}
+      {% for node in p %}
+        {% if node.layout == 'default' %}
           <li>
-            <a{% if page.class == page.cname %} class="active"{% endif %} href="{{ page.path }}" accesskey="{{ page.accesskey }}">
-              <i class="menu-{{ page.class }}"></i>
-              <span class="text">{{ page.header }}</span>
+            <a{% if node.url == page.url %} class="active"{% endif %} href="{{ node.path }}" accesskey="{{ node.accesskey }}">
+              <i class="menu-{{ node.class }}"></i>
+              <span class="text">{{ node.header }}</span>
             </a>
           </li>
         {% endif %}
