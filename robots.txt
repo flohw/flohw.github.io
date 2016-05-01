@@ -1,3 +1,4 @@
 User-Agent: *
+Disallow: /Florian-PARRENO.pdf
 
-Sitemap: http://florian-parreno.fr/sitemap.xml
+Sitemap: http://flohw.github.io/sitemap.xml
