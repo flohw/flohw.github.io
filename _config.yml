@@ -17,3 +17,14 @@ github_username:  flohw
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+      author: Florian PARRENO
