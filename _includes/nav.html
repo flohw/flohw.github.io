@@ -1,0 +1,14 @@
+<div id="menu">
+  <nav class="container-960">
+    <ul>
+      {% for page in site.pages %}
+        <li>
+          <a{% if page.class == page.active %} class="active"{% endif %} href="{{ page.path }}" accesskey="{{ page.accesskey }}">
+            <i class="menu-{{ page.class }}"></i>
+            <span class="text">{{ page.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

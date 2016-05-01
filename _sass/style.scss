@@ -1,0 +1,288 @@
+---
+---
+/*
+ *	100%	= 1280px
+ *	1em		= 16px
+ */
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #F6ECEC; /*FFF7C2;		/* CFBE8B */
+	margin: 0;
+	padding-top: 1em;	/* 16px / 16px */
+}
+h1 {
+	font-size: 2em;		/* 32px / 16px */
+	font-weight: bold;
+	margin: 0.8125em 0;	/* 13px / 16px */
+}
+h2 {
+	font-size: 1.5em;	/* 24px / 16px */
+	font-weight: bold;
+	margin: 0.8125em 0;	/* 13px / 16px */
+}
+p, .description {
+	text-indent: 4%;
+}
+textarea {
+	width: 100%;		/* 960px / 960px */
+}
+img {
+	max-width: 100%;	/* 960px / 960px */
+}
+a, a:visited {
+	text-decoration: none;
+	color: #9999ff;
+}
+
+h1 small {
+	font-size: 0.5em;	/* 16px / 32px */
+	font-weight: normal;
+	display: block;
+}
+
+.container-960 {
+	width: 90%;			/* 864px / 960px */
+	margin: 0 auto;
+}
+.clear {
+	clear: both;
+}
+.bold {
+	font-weight: bold;
+}
+
+#container {
+	padding: 1.25em 0;	/* 20px / 16px */
+	padding-bottom: 4.125em;	/* 66px / 16px */
+	box-sizing: border-box;
+}
+#container aside {
+	text-align: center;
+}
+
+#page header,
+#page #content {
+	padding-left: 2%;
+}
+
+#page .accordion h2 {
+	border-bottom: 2px solid #000;
+	padding-left: 2%;
+}
+
+#page .accordion h2.even {
+	color: #304174;
+	border-bottom-color: #304174;
+}
+
+#page .accordion h2 small {
+	display: block;
+}
+
+#content .description {
+}
+
+/*
+ *	Footer
+ */
+#footer {
+	clear: both;
+	height: 3.125em;	/* 50px / 16px */
+	line-height: 3.125em; /* 50px / 16px */
+	background-color: #3E97D1;
+	color: white;
+	font-size: 0.875em;	/* 14px / 16px */
+	width: 100%;
+
+	position: relative;
+	margin-top: -3.125em;
+}
+#footer p {
+	text-indent: 0;
+}
+#footer p#author {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+#footer p#year {
+	float: left;
+	width: 50%;
+	text-align: right;
+}
+
+
+/*
+ *	Navigation
+ */
+#menu {
+	background-color: #3E97D1;
+}
+#menu nav {
+	clear: both;
+}
+#menu nav ul {
+	margin: 0;
+	height: 2.1875em;	/* 35px / 16px */
+}
+#menu nav ul li {
+	display: block;
+	list-style: none;
+	float: left;
+	width: 25%;		/* 192px / 960px */
+}
+#menu nav ul li a {
+	width: 100%;	/* 192px / 192px */
+	display: inline-block;
+	text-align: center;
+	height: 2.1875em;	/* 35px / 16px */
+	color: #FFF089;
+}
+#menu nav ul li a.active {
+	color: #FC87A6;
+}
+#menu nav ul li a span {
+	display: none;
+	height: 1.3125em;		/* 21px / 16px */
+	line-height: 1.3125em;	/* 21px / 16px */
+}
+#menu nav ul li a.active {
+	background-color: #4673D5;
+}
+
+/*
+ *	Formulaire
+ */
+form .row-wrapper {
+	width: 100%;
+	padding-bottom: 1em;	/* 16px / 16px */
+}
+label {
+	width: 100%;
+	font-weight: bold;
+}
+input {
+	width: 100%;
+}
+input[type=submit] {
+	height: 2em;	/* 32px / 16px */
+	color: white;
+	background-color: #65A6D1;
+}
+
+.row-wrapper.required label:before {
+	content: '* ';
+	color: red;
+}
+.row-wrapper.error p {
+	color: red;
+}
+.message {
+	height: 2.5em; /* 40px / 16px */
+	border-radius: 10px;
+	margin-bottom: 1em; /* 16px / 16px */
+	text-indent: 0;
+	text-align: center;
+	line-height: 2.5em;
+}
+.message.success {
+	background-color: #80EE9C;
+	color: #006316;
+}
+.message.error {
+	background-color: #FF7373;
+	color: #A60000;
+}
+
+/*
+ * Tableaux
+ */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table thead {
+	font-weight: bold;
+}
+table .name, table .firstname, table .email {
+	display: none;
+}
+table thead th {
+	border-bottom: 2px solid black;
+}
+table thead th.action {
+	width: 20%;
+}
+table tbody tr.odd {
+	background-color: #AAA;
+}
+table tbody td {
+	border-bottom: 1px solid black;
+	height: 1.2em;
+	vertical-align: middle;
+}
+table tbody td[colspan="5"] {
+	text-align: center;
+}
+table tbody td.action {
+	text-align: center;
+}
+table tbody td a {
+	color: red;
+}
+
+/*
+ *	Icones
+ */
+i[class^="menu-"] {
+	background: url('../img/sprite.png') no-repeat;
+	width: 32px;
+	height: 32px;
+	display: block;
+	margin: 0 auto;
+}
+i.menu-accueil { background-position: 0 0; }
+i.menu-formation { background-position: -32px 0; }
+i.menu-experiences { background-position: -64px 0; }
+i.menu-competences { background-position: -96px 0; }
+i.menu-contact { background-position: -128px 0; }
+.active i[class^="menu-"] { background-position-y: -32px; }
+
+@media screen and (min-width: 560px) {
+	#container aside {
+		float: left;
+		width: 33.3333333%;
+	}
+
+	#page {
+		float: left;
+		width: 66.6666666%;
+	}
+
+	#menu nav ul {
+		height: 3.3125em;	/* 53px / 16px */
+	}
+	#menu nav ul li a {
+		height: 3.3125em;
+	}
+	#menu nav ul li a span {
+		display: block;
+	}
+
+	h2 small {
+		display: inline;
+		float: right;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	table .email {
+		display: table-cell;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	table .name, table .firstname {
+		display: table-cell;
+	}
+}
