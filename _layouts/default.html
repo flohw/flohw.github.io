@@ -11,7 +11,7 @@
         <header>
           <h1>{{ page.title }} <small>{{ page.side_title }}</small></h1>
         </header>
-        <section id="content">
+        <section id="content"{% if page.content_class %} class="{{ page.content_class }}"{% endif %}>
           {{ content }}
         </section>
       </article>
