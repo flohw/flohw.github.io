@@ -4,9 +4,9 @@
       {% for page in site.pages %}
         {% if page.layout == 'default' %}
           <li>
-            <a{% if page.class == page.active %} class="active"{% endif %} href="{{ page.path }}" accesskey="{{ page.accesskey }}">
+            <a{% if page.class == page.cname %} class="active"{% endif %} href="{{ page.path }}" accesskey="{{ page.accesskey }}">
               <i class="menu-{{ page.class }}"></i>
-              <span class="text">{{ page.title }}</span>
+              <span class="text">{{ page.header }}</span>
             </a>
           </li>
         {%endif%}

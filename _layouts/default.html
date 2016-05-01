@@ -4,7 +4,17 @@
   <body>
     {% include nav.html %}
     <div id="container" class="container-960">
-      {{ content }}
+      <aside>
+        <img src="img/illustrations/{{ page.cname }}.jpg" alt="{{ page.title}}">
+      </aside>
+      <article id="page">
+        <header>
+          <h1>{{ page.title }} <small>{{ page.side_title }}</small></h1>
+        </header>
+        <section id="content">
+          {{ content }}
+        </section>
+      </article>
       <div class="clear"></div>
     </div>
     {% include footer.html %}
