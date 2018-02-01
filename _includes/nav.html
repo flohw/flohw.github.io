@@ -3,7 +3,7 @@
     <ul>
       {% assign p = site.pages|sort: "weight" %}
       {% for node in p %}
-        {% if node.layout == 'default' %}
+        {% if node.header %}
           <li>
             <a{% if node.url == page.url %} class="active"{% endif %} href="{{ node.path }}" accesskey="{{ node.accesskey }}">
               <i class="menu-{{ node.class }}"></i>
