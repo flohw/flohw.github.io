@@ -21,9 +21,10 @@
             {% include header.html %}
             {% include profile.html %}
 
-             {% for page in site.pages %}
-                {% if page.name != 'sitemap.xml' %}
-                    {{ page.content }}
+            {% assign p = site.pages|sort: "weight" %}
+            {% for node in p %}
+                {% if node.name != 'sitemap.xml' %}
+                    {{ node.content }}
                 {% endif %}
              {% endfor %}
         </div>
