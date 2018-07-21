@@ -4,19 +4,19 @@ main:
     title: "À propos"
     link: "#about-card"
     icon: ios-person
-    page: index.html
+    page: about.html
   -
     title: "Formation"
     link: "#resume-card"
     icon: ios-ribbon
-    page: formation.html
+    page: education.html
   -
     title: "Expériences"
     link: "#work-card"
     icon: ios-briefcase
-    page: experiences.html
+    page: experience.html
   -
     title: Compétences
     link: "#skill-card"
     icon: ios-construct
-    page: competences.html
+    page: skills.html
