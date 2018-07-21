@@ -7,12 +7,12 @@ main:
     page: about.html
   -
     title: "Formation"
-    link: "#resume-card"
+    link: "#education-card"
     icon: ios-ribbon
     page: education.html
   -
     title: "Expériences"
-    link: "#work-card"
+    link: "#experience-card"
     icon: ios-briefcase
     page: experience.html
   -
