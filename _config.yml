@@ -7,7 +7,6 @@
 
 # Site settings
 title: Florian PARRENO
-email: flohwp@hotmail.fr
 author: Florian PARRENO
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://flohw.github.io" # the base hostname & protocol for your site
@@ -15,13 +14,9 @@ url: "https://flohw.github.io" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 
-sass:
-  style: compressed
-
 defaults:
   -
     scope:
       path: ""
     values:
       layout: default
-      author: Florian PARRENO

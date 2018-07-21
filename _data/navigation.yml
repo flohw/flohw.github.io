@@ -1,0 +1,18 @@
+# main links
+main:
+  -
+    title: "À propos"
+    link: "#about-card"
+    icon: ios-person
+  -
+    title: "Formation"
+    link: "#resume-card"
+    icon: ios-ribbon
+  -
+    title: "Expériences"
+    link: "#work-card"
+    icon: ios-briefcard
+  -
+    title: Compétences
+    link: "#skill-card"
+    icon: ios-construct
