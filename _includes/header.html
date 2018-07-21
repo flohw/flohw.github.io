@@ -1,12 +1,15 @@
-<head>
-  <meta charset="utf-8">
-  <title>{% if page.header %}{{ site.title }} | {{ page.header }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="author" content="{{ page.author }}">
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="alternate" hreflang="fr" href="{{ page.url | prepend: site.url }}">
-  <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-  {% if jekyll.environment == "production" %}
-  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-26626483-4', 'auto');ga('send', 'pageview');</script>
-  {% endif %}
-</head>
+<header class="header">
+    <div class="top-menu">
+        <ul>
+            {{site.data.navigation.main}}
+            {% for nav in site.data.navigation.main %}
+            <li{%if nav.link == site.data.navigation.main[0].link %} class="active"{% endif %}>
+                <a href="{{ nav.link }}">
+                    <span class="icon ion-{{ nav.icon }}"></span>
+                    <span class="link">{{ nav.title }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>

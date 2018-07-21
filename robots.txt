@@ -1,4 +1,2 @@
 User-Agent: *
 Disallow: /Florian-PARRENO.pdf
-
-Sitemap: http://flohw.github.io/sitemap.xml
