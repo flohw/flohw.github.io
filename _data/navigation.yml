@@ -13,7 +13,7 @@ main:
   -
     title: "Expériences"
     link: "#work-card"
-    icon: ios-briefcard
+    icon: ios-briefcase
     page: experiences.html
   -
     title: Compétences
