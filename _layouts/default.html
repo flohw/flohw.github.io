@@ -21,7 +21,11 @@
             {% include header.html %}
             {% include profile.html %}
 
-            {{ content }}
+             {% for page in site.pages %}
+                {% if page.name != 'sitemap.xml' %}
+                    {{ page.content }}
+                {% endif %}
+             {% endfor %}
         </div>
         
         <script type="text/javascript" src="{{ "/js/keymap.min.js" }}"></script>
