@@ -36,9 +36,7 @@
 
                 {% assign p = site.pages|sort: "weight" %}
                 {% for node in p %}
-                    {% if node.name != 'sitemap.xml' %}
-                        {{ node.content }}
-                    {% endif %}
+                    {{ node.content }}
                 {% endfor %}
             </div>
         </div>

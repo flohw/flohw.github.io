@@ -25,6 +25,3 @@ defaults:
     values:
       layout: default
       author: Florian PARRENO
-
-gems:
-  - jekyll-sitemap
