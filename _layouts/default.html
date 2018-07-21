@@ -34,9 +34,8 @@
                 {% include header.html %}
                 {% include profile.html %}
 
-                {% assign p = site.pages|sort: "weight" %}
-                {% for node in p %}
-                    {{ node.content }}
+                {% for nav in site.data.navigation.main %}
+                    {% include pages/{{nav.page}} %}
                 {% endfor %}
             </div>
         </div>
