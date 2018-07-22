@@ -1,0 +1,28 @@
+<div class="card-inner{% if include.active %} active{% endif %}" id="blog-card">
+    <div class="card-wrap">
+        <div class="content blog">
+            <div class="title">Derniers posts</div>
+            <div class="row border-line-v">
+                {% for post in paginator.posts %}
+                <div class="col col-d-12 col-t-12 col-m-12 border-line-h">
+                    <div class="box-item">
+                        <div class="image">
+                            <a href="{{post.url}}">
+                                <img src="{{post.header}}" alt="{{post.title}}" />
+                                <span class="info">
+                                    <span class="ion ion-document-text"></span>
+                                </span>
+                                <span class="date">{% include date date=post.date format='date_only' %}</span>
+                            </a>
+                        </div>
+                        <div class="desc">
+                            <a href="{{post.url}}" class="name">{{post.title}}</a>
+                            <div class="category">{{post.category}}</div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

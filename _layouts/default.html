@@ -4,52 +4,18 @@
 
     <body>
         <div class="page">
-            <div class="preloader">
-                <div class="centrize full-width">
-                <div class="vertical-center">
-                    <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                    </div>
-                </div>
-                </div>
-            </div>
-
-            <div class="background gradient">
-                <ul class="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+            {% include loader %}
 
             <div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
                 {% include header.html %}
                 {% include profile.html %}
 
                 {% for nav in site.data.navigation.main %}
-                    {% include pages/{{nav.page}} %}
+                    {% include pages/{{nav.page}} active=nav.default %}
                 {% endfor %}
             </div>
         </div>
         
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.validate.js"></script>
-        <script src="assets/js/jquery.magnific-popup.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.js"></script>
-        <script src="assets/js/masonry.pkgd.js"></script>
-        <script src="assets/js/masonry-filter.js"></script>
-        <script src="assets/js/jquery.slimscroll.js"></script>
-        
-        <!--script src="http://maps.google.com/maps/api/js?sensor=false"></script-->
-        
-        <script src="assets/js/scripts.js"></script>
+        {% include scripts %}
     </body>
 </html>

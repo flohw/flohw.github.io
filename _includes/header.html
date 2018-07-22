@@ -1,9 +1,9 @@
 <header class="header">
     <div class="top-menu">
+        {% assign menu_name = include.nav|default:'main' %}
         <ul>
-            {{site.data.navigation.main}}
-            {% for nav in site.data.navigation.main %}
-            <li{%if nav.link == site.data.navigation.main[0].link %} class="active"{% endif %}>
+            {% for nav in site.data.navigation[menu_name] %}
+            <li{%if nav.default %} class="active"{% endif %}>
                 <a href="{{ nav.link }}">
                     <span class="icon ion-{{ nav.icon }}"></span>
                     <span class="link">{{ nav.title }}</span>

@@ -5,6 +5,7 @@ main:
     link: "#about-card"
     icon: ios-person
     page: about.html
+    default: true
   -
     title: "Formation"
     link: "#education-card"
@@ -20,3 +21,19 @@ main:
     link: "#skill-card"
     icon: ios-construct
     page: skills.html
+  # -
+  #   title: Blog
+  #   link: "#blog-card"
+  #   icon: md-text
+  #   page: blog.html
+
+blog:
+  -
+    title: "Accueil"
+    link: '/'
+    icon: ios-home
+  -
+    title: Blog
+    link: "/#blog-card"
+    icon: md-text
+    default: true

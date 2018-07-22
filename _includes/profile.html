@@ -1,9 +1,9 @@
 <div class="card-started" id="home-card">
     <div class="profile">
-        <div class="slide" style="background-image: url(assets/images/bg.jpg);"></div>
+        <div class="slide" style="background-image: url(/assets/images/bg.jpg);"></div>
 
         <div class="image">
-            <img src="assets/images/profile.jpg" alt="{{ site.author }}" />
+            <img src="/assets/images/profile.jpg" alt="{{ site.author }}" />
         </div>
 
         <div class="title">Florian PARRENO</div>
@@ -23,13 +23,15 @@
 
         <div class="lnks">
             <a href="Florian-PARRENO.pdf" class="lnk">
-                <span class="text">Download CV</span>
+                <span class="text">Mon CV</span>
                 <span class="ion ion-md-archive"></span>
             </a>
-            <a href="#" class="lnk discover">
-                <span class="text">Contact Me</span>
+            {% if include.button == 'blog' %}
+            <a href="/#blog-card" class="lnk discover active">
+                <span class="text">Blog</span>
                 <span class="arrow"></span>
             </a>
+            {% endif %}
         </div>
 
     </div>

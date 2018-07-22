@@ -1,0 +1,58 @@
+{% if include.format == 'long' %}
+    {{ include.date|date: '%d' }}
+
+    {% assign month = include.date | date: "%m" %}
+    {% case month %}
+    {% when '01' %}Janvier
+    {% when '02' %}Février
+    {% when '03' %}Mars
+    {% when '04' %}Avril
+    {% when '05' %}Mai
+    {% when '06' %}Juin
+    {% when '07' %}Juillet
+    {% when '08' %}Août
+    {% when '09' %}Septembre
+    {% when '10' %}Octobre
+    {% when '11' %}Novembre
+    {% when '12' %}Décembre
+    {% endcase %}
+
+    {{include.date|date: '%Y'}}
+{% elsif include.format == 'short' %}
+    {{ include.date|date:'%d' }}
+    {% assign month = include.date | date: "%m" %}
+    {% case month %}
+    {% when '01' %}Jan
+    {% when '02' %}Fév
+    {% when '03' %}Mar
+    {% when '04' %}Avr
+    {% when '05' %}Mai
+    {% when '06' %}Juin
+    {% when '07' %}Juil
+    {% when '08' %}Aoû
+    {% when '09' %}Sep
+    {% when '10' %}Oct
+    {% when '11' %}Nov
+    {% when '12' %}Déc
+    {% endcase %}
+    {{ include.date|date: '%Y' }}
+{% elsif include.format == 'date_only' %}
+    <strong>{{ include.date|date:'%d' }}</strong>
+    {% assign month = include.date | date: "%m" %}
+    {% case month %}
+    {% when '01' %}Jan
+    {% when '02' %}Fév
+    {% when '03' %}Mar
+    {% when '04' %}Avr
+    {% when '05' %}Mai
+    {% when '06' %}Juin
+    {% when '07' %}Juil
+    {% when '08' %}Aoû
+    {% when '09' %}Sep
+    {% when '10' %}Oct
+    {% when '11' %}Nov
+    {% when '12' %}Déc
+    {% endcase %}
+{% else %}
+    Format de date {{include.format}} invalide.
+{% endif %}

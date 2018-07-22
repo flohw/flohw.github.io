@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    {% include head.html %}
+
+    <body>
+        <div class="page">
+            {% include loader %}
+
+            <div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+                {% include header.html nav='blog' %}
+                {% include profile.html button='blog' %}
+
+                <div class="card-inner blog blog-post animated" id="blog-card">
+                    <div class="card-wrap">
+                        <div class="content blog-single">
+                            <div class="title">Article</div>
+                            <div class="row border-line-v">
+                                <div class="col col-m-12 col-t-12 col-d-12">
+                                    <div class="post-box">
+                                        <h1>{{ page.title }}</h1>
+                                        <div class="blog-detail">Posté le {% include date date=page.date format='long' %}</div>
+                                        <div class="blog-image">
+                                            <img src="{{page.header}}" alt="{{page.title}}" />
+                                        </div>
+                                        <div class="blog-content">
+                                            {{ content }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %}
+                                <div class="title">Commentaires</div>
+                                <div class="row border-line-v">
+                                    <div class="col col-m-12 col-t-12 col-d-12">
+                                        <div class="post-box">
+                                            <div class="col-md-12">
+                                                <ul class="post-comments">
+                                                    <!-- comment item -->
+                                                    <li>
+                                                        <img src="images/man1.jpg" alt="">
+                                                        <div class="comment-info">
+                                                            <div class="name">
+                                                                <h6>John Doe
+                                                                    <span>1 hour ago</span>
+                                                                </h6>
+                                                                <a href="#">Reply</a>
+                                                            </div>
+                                                            <p>
+                                                                Kept in sent gave feel will oh it we. Has pleasure procured men laughing shutters nay.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="title">Laisser un commentaire</div>
+                                <div class="row border-line-v">
+                                    <div class="col col-m-12 col-t-12 col-d-12">
+                                        <div class="post-box">
+                                            <form id="cform" method="post">
+                                                <div class="row">
+                                                    <div class="col col-d-12 col-t-12 col-m-12">
+                                                        <div class="group-val">
+                                                            <input type="text" name="name" placeholder="Nom" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-d-12 col-t-12 col-m-12">
+                                                        <div class="group-val">
+                                                            <textarea name="message" placeholder="Commentaire"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="align-left">
+                                                    <a href="#" class="button" onclick="$('#cform').submit(); return false;">
+                                                        <span class="text">Envoyer</span>
+                                                        <span class="arrow"></span>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                            <div class="alert-success">
+                                                <p>Merci, votre commentaire a bien été ajouté.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include scripts %}
+    </body>
+</html>
