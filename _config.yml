@@ -20,6 +20,9 @@ sass:
   sass_dir: assets/scss/
   style: compressed
 
+exclude:
+  - assets/scss
+
 defaults:
   -
     scope:
