@@ -1,0 +1,15 @@
+<div class="card-inner{% if include.active %} active{% endif %}" id="career-card">
+    <div class="card-wrap">
+        <div class="content resume">
+            <div class="title">Parcours</div>
+            <div class="row">
+                <div class="col col-d-6 col-t-12 col-m-12 border-line-v">
+                    {% include template/resume.html title="Expérience" icon='ios-briefcase' list=site.data.experience %}
+                </div>
+                <div class="col col-d-6 col-t-12 col-m-12 border-line-v">
+                    {% include template/resume.html title="Formation" icon='ios-school' list=site.data.education %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

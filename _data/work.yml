@@ -1,0 +1,41 @@
+-
+  title: Lexik
+  category: experience
+  type: image
+  link: /assets/images/work/lexik.png
+  preview: /assets/images/work/lexik-preview.jpg
+
+-
+  title: Choosit
+  category: experience
+  type: image
+  link: /assets/images/work/choosit.png
+  preview: /assets/images/work/choosit-preview.jpg
+
+-
+  title: UPMF
+  category: formation
+  type: image
+  link: /assets/images/education/upmf.png
+  preview: /assets/images/education/upmf-preview.jpg
+
+-
+  title: Bonitasoft
+  category: experience
+  type: image
+  link: /assets/images/work/bonitasoft.png
+  preview: /assets/images/work/bonitasoft-preview.jpg
+
+-
+  title: Bedycasa
+  category: experience
+  type: image
+  link: /assets/images/work/bedycasa.png
+  preview: /assets/images/work/bedycasa-preview.jpg
+
+-
+  title: WebAlternatif
+  category: experience
+  type: image
+  link: /assets/images/work/webalternatif.png
+  preview: /assets/images/work/webalternatif-preview.jpg

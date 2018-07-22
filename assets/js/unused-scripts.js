@@ -80,16 +80,6 @@ $(function () {
 		Popups
 	*/
 
-    /* popup image */
-    $('.has-popup-image').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        mainClass: 'popup-box',
-        image: {
-            verticalFit: true
-        }
-    });
-
     /* popup video */
     $('.has-popup-video').magnificPopup({
         disableOn: 700,

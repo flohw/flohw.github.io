@@ -1,0 +1,44 @@
+-
+  date: 2015 - Aujourd'hui
+  title: Lead Développeur
+  company: Lexik / Choosit
+  excerpt: >
+            Développement, maintenance et architecture d'applications
+            <a href="https://symfony.com/">Symfony</a>,
+            <a href="https://angularjs.org/">AngularJS</a>,
+            <a href="https://reactjs.org/">React</a>.
+-
+  date: 2014 - 2015
+  title: Développeur web
+  company: BedyCasa
+  excerpt: >
+            Développeur pour <a href="https://www.bedycasa.com/">BedyCasa</a>.
+            Collaboration aux projets de développement.
+
+-
+  date: 2014 (2 mois)
+  title: Développeur web
+  company: WebAlternatif
+  excerpt: Développement de <a href="https://www.wedoogift.com/">WeDooGift</a> avec ZendFramework 2.
+
+-
+  date: 2013 (5 mois)
+  title: Technicien informatique web
+  company: BonitaSoft
+  excerpt: >
+            Développement du site <a href="https://www.bonitasoft.com/">Bonitasoft</a> et du
+            site communautaire sous <a href="https://www.drupal.org/project/commons">Druapl Commons</a>.
+
+-
+  date: 2012 - 2013 (10 mois)
+  title: Alternant
+  company: BonitaSoft
+  excerpt: >
+            Développement du site <a href="https://www.bonitasoft.com/">Bonitasoft</a>
+            et du site communautaire sous <a href="https://www.drupal.org/project/commons">Druapl Commons</a>.
+
+-
+  date: 2012 (2 mois)
+  title: Stagiaire
+  company: NetInov
+  excerpt: Stage de fin d'étude sur le CMS E-Commerce <a href="https://www.prestashop.com/fr">PrestaShop</a>.

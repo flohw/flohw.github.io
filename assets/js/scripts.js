@@ -106,4 +106,34 @@ $(function () {
         });
     }
 
+
+    var $container = $('.grid-items');
+
+    $container.imagesLoaded(function () {
+        setTimeout(function() {$container.multipleFilterMasonry({
+            itemSelector: '.grid-item',
+            filtersGroupSelector: '.filter-button-group',
+            percentPosition: true,
+            gutter: 0
+        });
+    }, 5)
+    });
+
+
+	/*
+		12. Initialize masonry filter
+	*/
+    $('.filter-button-group').on('change', 'input[type="radio"]', function () {
+        $('.f_btn').removeClass('active');
+        $(this).closest('.f_btn').addClass('active');
+
+        $('.has-popup-image').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'popup-box',
+            image: {
+                verticalFit: true
+            }
+        });
+    }).find('input[type="radio"][value="grid-item"]').trigger('change');
 });

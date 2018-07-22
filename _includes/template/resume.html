@@ -1,0 +1,14 @@
+<div class="resume-title border-line-h">
+    <div class="icon"><i class="ion ion-{{ include.icon }}"></i></div>
+    <div class="name">{{ include.title }}</div>
+</div>
+<div class="resume-items">
+    {% for item in include.list %}
+        <div class="resume-item border-line-h{% if forloop.first %} active{% endif %}">
+            <div class="date">{{ item.date }}</div>
+            <div class="name">{{ item.title }}</div>
+            <div class="company">{{ item.company }}</div>
+            <p>{{ item.excerpt }}</p>
+        </div>
+    {% endfor %}
+</div>
