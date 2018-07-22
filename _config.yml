@@ -12,7 +12,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://flohw.github.io" # the base hostname & protocol for your site
 paginate: 5
 
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
 
 defaults:
   -
