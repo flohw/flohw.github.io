@@ -1,0 +1,60 @@
+<div class="card-inner{% if include.active %} active{% endif %}" id="contact-card">
+    <div class="card-wrap">
+        <div class="content contacts">
+            <div class="title">En contact</div>
+            <div class="row">
+                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                    <div class="map" id="map"></div>
+
+                    <div class="info-list">
+                        <ul>
+                            <li><strong>Travail . . . . .</strong> 425 Rue Alfred Nobel, Montpellier</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="content contacts">
+            <div class="title">Formulaire de contact</div>
+            <div class="row">
+                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                    <div class="contact_form">
+                        <form id="cform" method="post" autocomplete="off">
+                            <div class="row">
+                                <div class="col col-d-6 col-t-6 col-m-12">
+                                    <div class="group-val">
+                                        <input type="text" name="name" placeholder="Nom Prénom" />
+                                    </div>
+                                </div>
+                                <div class="col col-d-6 col-t-6 col-m-12">
+                                    <div class="group-val">
+                                        <input type="text" name="email" placeholder="Adresse email" />
+                                    </div>
+                                </div>
+                                <div class="col col-d-12 col-t-12 col-m-12">
+                                    <div class="group-val">
+                                        <textarea name="message" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="align-left">
+                                <a href="#" class="button" onclick="$('#cform').submit(); return false;">
+                                    <span class="text">Envoyer</span>
+                                    <span class="arrow"></span>
+                                </a>
+                            </div>
+                        </form>
+                        <div class="alert-success">
+                            <p>Merci, votre message a été envoyé.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

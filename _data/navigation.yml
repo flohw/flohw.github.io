@@ -26,6 +26,11 @@ main:
   #   link: "#blog-card"
   #   icon: md-text
   #   page: blog.html
+  -
+    title: Contact
+    link: '#contact-card'
+    icon: ios-contact
+    page: contact.html
 
 blog:
   -

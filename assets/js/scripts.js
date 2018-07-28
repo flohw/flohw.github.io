@@ -33,7 +33,6 @@ $(function () {
 		var card_item = $(id);
 		var menu_items = $('.top-menu li');
 		var menu_item = $(this).closest('li');
-		var d_lnk = $('.lnks .lnk.discover');
 
 		/* if desktop */
 		if(!menu_item.hasClass('active') & (width > 1023) & $('#home-card').length) {
@@ -76,6 +75,12 @@ $(function () {
     if ('' !== window.location.hash) {
         $('.top-menu a[href="' + window.location.hash + '"]').trigger('click');
     }
+
+
+    $('.lnks').on('click', '.lnk.discover', function () {
+        $('.top-menu a[href="' + $(this).attr('href') + '"]').trigger('click');
+        return false;
+    });
 
 	/*
 		Smoothscroll
@@ -136,4 +141,85 @@ $(function () {
             }
         });
     }).find('input[type="radio"][value="grid-item"]').trigger('change');
+
+    if ($('#map').length) {
+        initMap();
+    }
+
+
+	/*
+		Validate Contact Form
+	*/
+    $("#cform").validate({
+        ignore: ".ignore",
+        rules: {
+            name: {
+                required: true
+            },
+            message: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            hiddenRecaptcha: {
+                required: function () {
+                    if (grecaptcha.getResponse() == '') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        },
+        success: "valid",
+        submitHandler: function () {
+            $.ajax({
+                url: 'https://www.enformed.io/v6sdzt7v',
+                type: 'post',
+                dataType: 'html',
+                data: $('#cform').serializeArray().map(function (value) {
+                    return value.name+'='+value.value;
+                }).join('&'),
+                success: function () {
+                    $('#cform').slideUp();
+                    $('.alert-success').delay(1000).fadeIn();
+                },
+                error: function () {
+                    console.log(arguments);
+                }
+            });
+        }
+    });
 });
+
+function initMap() {
+    new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM(),
+            }),
+            new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    features: [new ol.Feature({
+                        geometry: new ol.geom.Point([435580.5858330612, 5405686.443270795])
+                    })],
+                }),
+                style: new ol.style.Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 41],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'pixels',
+                        src: 'https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png'
+                    })
+                })
+            })
+        ],
+        view: new ol.View({
+            center: [435526.82856194355, 5405773.638586875],
+            zoom: 16
+        })
+    });
+}
