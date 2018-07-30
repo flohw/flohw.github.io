@@ -31,3 +31,8 @@ defaults:
       type: "posts"
     values:
       layout: "single-post"
+  -
+    scope:
+      path:            "**/*.pdf"
+    values:
+      sitemap:         false
