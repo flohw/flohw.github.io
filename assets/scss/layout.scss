@@ -1185,9 +1185,13 @@
 /*
 	6. Contacts
 */
-.content.contacts .map {
-	margin: 0 0 20px 0;
-	height: 190px;
+.content.contacts form label {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 
 .alert-success {

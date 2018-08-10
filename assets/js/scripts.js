@@ -142,11 +142,6 @@ $(function () {
         });
     }).find('input[type="radio"][value="grid-item"]').trigger('change');
 
-    if ($('#map').length) {
-        initMap();
-    }
-
-
 	/*
 		Validate Contact Form
 	*/
@@ -193,33 +188,3 @@ $(function () {
         }
     });
 });
-
-function initMap() {
-    new ol.Map({
-        target: 'map',
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.OSM(),
-            }),
-            new ol.layer.Vector({
-                source: new ol.source.Vector({
-                    features: [new ol.Feature({
-                        geometry: new ol.geom.Point([435580.5858330612, 5405686.443270795])
-                    })],
-                }),
-                style: new ol.style.Style({
-                    image: new ol.style.Icon({
-                        anchor: [0.5, 41],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'pixels',
-                        src: 'https://unpkg.com/leaflet@1.3.3/dist/images/marker-icon.png'
-                    })
-                })
-            })
-        ],
-        view: new ol.View({
-            center: [435526.82856194355, 5405773.638586875],
-            zoom: 16
-        })
-    });
-}
